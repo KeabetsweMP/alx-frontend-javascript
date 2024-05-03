@@ -1,9 +1,5 @@
-export default function hasValuesFromArray(s, arr) {
-  for (const i of arr) {
-    if (!s.has(i)) {
-      return false;
-    }
-  }
-  return true;
+
+export default function hasValuesFromArray(set, arr) {
+  return arr.reduce((prev, curr) => prev && set.has(curr), true);
 }
 
